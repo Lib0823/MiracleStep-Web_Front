@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="run.png">
+
+    <title>MiracleStep Admin Page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+
+    <script src="ie-emulation-modes-warning.js"></script>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Miracle Step</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><h5 style="color: whitesmoke;">Admin</h5></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Logout</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            
+            <li><p style="text-align: center;">Main</p></li>
+            <li><a href="main.html">Home</a></li>
+            <hr>
+            <li><p style="text-align: center;">User</p></li>
+            <li><a href="searchUser.html">Search Users</a></li>
+            <li><a href="addingUser.html">Adding Users</a></li>
+            <li><a href="removingUser.html">Remove Users</a></li>
+            <li><a href="modifyingUser.html">Modify Users</a></li>
+          </ul><hr>
+
+          <ul class="nav nav-sidebar">
+            <li><p style="text-align: center;">Campaign</p></li>
+            <li><a href="searchCampaign.html">Search Campaign</a></li>
+            <li><a href="modifyCampaign.html">Modify Campaign</a></li>
+            <li class="active"><a href="removeCampaign.html">Remove Campaign <span class="sr-only">(current)</span></a></li>
+          </ul>
+
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <br>
+          <h2 class="sub-header">Campaign Remove</h2>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>No.</th>
+                  <th>Id</th>
+                  <th>Name</th>
+                  <th>Tel</th>
+                  <th>AvaliableStep</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>01</td>
+                  <td>test1234@naver.com</td>
+                  <td>card</td>
+                  <td>010-6542-9844</td>
+                  <td>1560</td>
+                </tr>
+                <tr>
+                  <td>02</td>
+                  <td>asdf@gmail.com</td>
+                  <td>inbeom</td>
+                  <td>010-1234-5678</td>
+                  <td>84658</td>
+                </tr>
+        
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="holder.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
