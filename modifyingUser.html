@@ -24,12 +24,12 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">Miracle Step</a>
+          <a class="navbar-brand" href="main.html">Miracle Step</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><h5 style="color: whitesmoke;">Admin</h5></li>
-            <li><a href="#">Home</a></li>
+            <li><a href="main.html">Home</a></li>
             <li><a href="#">Login</a></li>
             <li><a href="#">Logout</a></li>
             <li><a href="#">Help</a></li>
@@ -65,34 +65,53 @@
           <br>
           <h2 class="sub-header">User Modify</h2>
           <div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>No.</th>
-                  <th>Id</th>
-                  <th>Name</th>
-                  <th>Tel</th>
-                  <th>AvaliableStep</th>
+            <!-- User 정보 수정 화면 -->
+            <!-- ID를 선택해서 input에 value로 뿌려주면 된다.-->
+            <form action="#" method="#" style="border: 1px solid;">
+              <table>
+                <tr style="border-bottom: 1px solid gray;">
+                  <th><h3 style="margin: 20pt;">divison</h3></th>
+                  <th><h3 style="margin: 20pt 200pt 20pt 70pt;">modify</h3></th>
                 </tr>
-              </thead>
-              <tbody>
+                  
                 <tr>
-                  <td>01</td>
-                  <td>test1234@naver.com</td>
-                  <td>card</td>
-                  <td>010-6542-9844</td>
-                  <td>1560</td>
+                  <td><h5 style="margin: 20pt 20pt 10pt 25pt;">ID</h5></td>
+                  <td><input type="text" name="addId" placeholder="asdf@naver.com" style="margin-left: 70pt;"><button style="margin-left: 5pt;">check</button></td> 
                 </tr>
                 <tr>
-                  <td>02</td>
-                  <td>asdf@gmail.com</td>
-                  <td>inbeom</td>
-                  <td>010-1234-5678</td>
-                  <td>84658</td>
+                  <td><h5 style="margin: 10pt 20pt 10pt 25pt;">Password</h5></td>
+                  <td><input type="password" name="addPassword" placeholder="?" style="margin-left: 70pt;"></td> 
                 </tr>
-        
-              </tbody>
-            </table>
+                <tr>
+                  <td><h5 style="margin: 10pt 20pt 10pt 25pt;">Name</h5></td>
+                  <td><input type="text" name="addName" placeholder="?" style="margin-left: 70pt;"></td> 
+                </tr>
+                <tr>
+                  <td><h5 style="margin: 10pt 20pt 10pt 25pt;">PhoneNumber</h5></td>
+                  <td><input type="text" name="addPhoneNumber" placeholder="?" style="margin-left: 70pt;"></td> 
+                </tr>
+                <tr>
+                  <td><h5 style="margin: 10pt 20pt 10pt 25pt;">Birth</h5></td>
+                  <td><input type="text" name="addBirth" placeholder="?" style="margin-left: 70pt;"></td> 
+                </tr>
+                <tr>
+                  <td><h5 style="margin: 10pt 20pt 10pt 25pt;">Height</h5></td>
+                  <td><input type="text" name="addHeight" placeholder="?" style="margin-left: 70pt;"></td> 
+                </tr>
+                <tr>
+                  <td><h5 style="margin: 10pt 20pt 10pt 25pt;">Weight</h5></td>
+                  <td><input type="text" name="addWeight" placeholder="?" style="margin-left: 70pt;"></td> 
+                </tr>
+                <tr>
+                  <td><h5 style="margin: 10pt 20pt 10pt 25pt;">AvailableStep</h5></td>
+                  <td><input type="text" name="addAvailableStep" placeholder="?" style="margin-left: 70pt;"></td> 
+                </tr>
+                <tr>
+                  <td colspan="2" style="padding: 25pt;"><input type="submit" value="Update" 
+                    style="width: 295pt; height: 20pt;"></td>
+                </tr>
+              </table>
+            </form>
           </div>
         </div>
       </div>
