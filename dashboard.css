@@ -101,5 +101,7 @@ body {
   }
   .placeholder img {
     display: inline-block;
-    border-radius: 50%;
+    border-radius: 10%;
   }
+
+

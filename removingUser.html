@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="run.png">
+    <link rel="icon" href="img/run.png">
 
     <title>MiracleStep Admin Page</title>
 
@@ -56,19 +56,31 @@
           <ul class="nav nav-sidebar">
             <li><p style="margin-left: 17pt;">Campaign</p></li>
             <li><a href="searchCampaign.html">Search Campaign</a></li>
-            <li><a href="modifyCampaign.html">Modify Campaign</a></li>
             <li><a href="removeCampaign.html">Remove Campaign</a></li>
           </ul>
+
+          <!-- 사용자 삭제 체크 이벤트 -->
+          <script>
+            function remove_check(userId){
+              if (confirm("'"+userId+"' 사용자 정보를 삭제하시겠습니까?") == true){    //확인
+                var form = document.removeUser;
+                form.submit();
+                        
+              }else{   //취소
+                return;
+              }
+            }
+          </script>
 
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <br>
           <h2 class="sub-header">User Remove</h2>
           <!-- User 삭제 -->
-          <form action="#" method="#">
+          <form name="removeUser" action="#" method="#">
             ID : &nbsp;
-            <input type="text" name="user_search" placeholder="test@naver.com" style="height: 21pt;">
-            <input type="submit" value="Remove" style="height: 21pt;">
+            <input type="text" id="user_remove" name="user_remove" placeholder="test@naver.com" style="height: 21pt;">
+            <input type="button" value="Remove" style="height: 21pt;" onclick="remove_check(document.getElementById('user_remove').value)">
           </form>
           <hr>
           <div class="table-responsive">

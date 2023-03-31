@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="run.png">
+    <link rel="icon" href="img/run.png">
 
     <title>MiracleStep Admin Page</title>
 
@@ -56,9 +56,21 @@
           <ul class="nav nav-sidebar">
             <li><p style="margin-left: 17pt;">Campaign</p></li>
             <li><a href="searchCampaign.html">Search Campaign</a></li>
-            <li><a href="modifyCampaign.html">Modify Campaign</a></li>
             <li><a href="removeCampaign.html">Remove Campaign</a></li>
           </ul>
+
+          <!-- 사용자 정보 수정 체크 이벤트 -->
+          <script>
+            function modify_check(userId){
+              if (confirm("'"+userId+"' 사용자 정보를 수정하시겠습니까?") == true){    //확인
+                var form = document.modifyUser;
+                form.submit();
+                        
+              }else{   //취소
+                return;
+              }
+            }
+          </script>
 
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -67,7 +79,7 @@
           <div class="table-responsive">
             <!-- User 정보 수정 화면 -->
             <!-- ID를 선택해서 input에 value로 뿌려주면 된다.-->
-            <form action="#" method="#" style="border: 1px solid;">
+            <form name="modifyUser" action="#" method="#" style="border: 1px solid;">
               <table>
                 <tr style="border-bottom: 1px solid gray;">
                   <th><h3 style="margin: 20pt;">divison</h3></th>
@@ -76,39 +88,39 @@
                   
                 <tr>
                   <td><h5 style="margin: 20pt 20pt 10pt 25pt;">ID</h5></td>
-                  <td><input type="text" name="addId" placeholder="asdf@naver.com" style="margin-left: 70pt;"><button style="margin-left: 5pt;">check</button></td> 
+                  <td><input type="text" id="modifyId" name="modifyId" placeholder="asdf@naver.com" style="margin-left: 70pt;"><button style="margin-left: 5pt;">check</button></td> 
                 </tr>
                 <tr>
                   <td><h5 style="margin: 10pt 20pt 10pt 25pt;">Password</h5></td>
-                  <td><input type="password" name="addPassword" placeholder="?" style="margin-left: 70pt;"></td> 
+                  <td><input type="password" name="modifyPassword" placeholder="?" style="margin-left: 70pt;"></td> 
                 </tr>
                 <tr>
                   <td><h5 style="margin: 10pt 20pt 10pt 25pt;">Name</h5></td>
-                  <td><input type="text" name="addName" placeholder="?" style="margin-left: 70pt;"></td> 
+                  <td><input type="text" name="modifyName" placeholder="?" style="margin-left: 70pt;"></td> 
                 </tr>
                 <tr>
                   <td><h5 style="margin: 10pt 20pt 10pt 25pt;">PhoneNumber</h5></td>
-                  <td><input type="text" name="addPhoneNumber" placeholder="?" style="margin-left: 70pt;"></td> 
+                  <td><input type="text" name="modifyPhoneNumber" placeholder="?" style="margin-left: 70pt;"></td> 
                 </tr>
                 <tr>
                   <td><h5 style="margin: 10pt 20pt 10pt 25pt;">Birth</h5></td>
-                  <td><input type="text" name="addBirth" placeholder="?" style="margin-left: 70pt;"></td> 
+                  <td><input type="text" name="modifyBirth" placeholder="?" style="margin-left: 70pt;"></td> 
                 </tr>
                 <tr>
                   <td><h5 style="margin: 10pt 20pt 10pt 25pt;">Height</h5></td>
-                  <td><input type="text" name="addHeight" placeholder="?" style="margin-left: 70pt;"></td> 
+                  <td><input type="text" name="modifyHeight" placeholder="?" style="margin-left: 70pt;"></td> 
                 </tr>
                 <tr>
                   <td><h5 style="margin: 10pt 20pt 10pt 25pt;">Weight</h5></td>
-                  <td><input type="text" name="addWeight" placeholder="?" style="margin-left: 70pt;"></td> 
+                  <td><input type="text" name="modifyWeight" placeholder="?" style="margin-left: 70pt;"></td> 
                 </tr>
                 <tr>
                   <td><h5 style="margin: 10pt 20pt 10pt 25pt;">AvailableStep</h5></td>
-                  <td><input type="text" name="addAvailableStep" placeholder="?" style="margin-left: 70pt;"></td> 
+                  <td><input type="text" name="modifyAvailableStep" placeholder="?" style="margin-left: 70pt;"></td> 
                 </tr>
                 <tr>
-                  <td colspan="2" style="padding: 25pt;"><input type="submit" value="Update" 
-                    style="width: 295pt; height: 20pt;"></td>
+                  <td colspan="2" style="padding: 25pt;"><input type="button" value="Update" 
+                    style="width: 295pt; height: 20pt;" onclick="modify_check(document.getElementById('modifyId').value)"></td>
                 </tr>
               </table>
             </form>

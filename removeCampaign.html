@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="run.png">
+    <link rel="icon" href="img/run.png">
 
     <title>MiracleStep Admin Page</title>
 
@@ -56,19 +56,32 @@
           <ul class="nav nav-sidebar">
             <li><p style="margin-left: 17pt;"><b>Campaign</b></p></li>
             <li><a href="searchCampaign.html">Search Campaign</a></li>
-            <li><a href="modifyCampaign.html">Modify Campaign</a></li>
             <li class="active"><a href="removeCampaign.html">Remove Campaign <span class="sr-only">(current)</span></a></li>
           </ul>
+
+          <!-- 캠페인 제거 체크 이벤트 -->
+          <script>
+            function remove_check(campaignId){
+              if (confirm("'"+campaignId+"캠페인 정보를 삭제하시겠습니까?") == true){    //확인
+                var form = document.removeCampaign;
+                form.submit();
+                        
+              }else{   //취소
+                return;
+              }
+            }
+          </script>
 
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <br>
           <h2 class="sub-header">Campaign Remove</h2>
           <!-- Campaign 삭제 -->
-          <form action="#" method="#">
+          <form name="removeCampaign" action="#" method="#">
             ID : &nbsp;
-            <input type="text" name="user_search" placeholder="campaign01" style="height: 21pt;">
-            <input type="submit" value="Remove" style="height: 21pt;">
+            <input type="text" id="campaign_remove" name="campaign_remove" placeholder="campaign01" style="height: 21pt;">
+            <input type="button" value="Remove" style="height: 21pt;" 
+            onclick="remove_check(document.getElementById('campaign_remove').value)">
           </form>
           <hr>
           <div class="table-responsive">
